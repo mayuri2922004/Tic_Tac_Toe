@@ -1,4 +1,5 @@
 *{
+  
     margin: 0%;
     padding: 0%;
 }
@@ -14,30 +15,51 @@ body{
     height: 70vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 
 }
 
-.game{
+/* .game{
     height: 60vmin;
     width: 60vmin;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
     align-items: center;
-    gap: 1.5vmin;
+
 }
 
 .box{
     height: 18vmin;
     width: 18vmin;
-    border-radius: 15px;
-    border: none;
-    font-size: 8vmin;
+    font-size: 10vmin;
     color: white;
     background-color:black;
+} */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
 }
 
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+/* Vertical lines */
+.box:not(:nth-child(3n)) {
+  border-right: 5px solid black;
+}
+
+/* Horizontal lines */
+.box:nth-child(-n+6) {
+  border-bottom: 5px solid black;
+}
 #reset-btn{
 
         font-size: 50px;
@@ -129,3 +151,6 @@ h1{
     
     }
 }
+
+
+ 
